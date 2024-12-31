@@ -16,6 +16,7 @@ import { alpha, useTheme } from '@mui/material/styles';
 
 import CustomButton from '../components/CustomButton';
 import ColorModeContext from '../utils/ColorModeContext';
+import CustomLogoIcon from '../components/CustomIcon'; // Adjust path as needed
 
 interface Props {
   onSidebarOpen: () => void;
@@ -41,33 +42,28 @@ const Header = ({ onSidebarOpen }: Props): JSX.Element => {
       >
         <Toolbar sx={{ minHeight: 70 }}>
           <Link href='/' sx={{ textDecoration: 'none' }}>
-            <IconButton size='large' disabled>
-              <StormIcon
+          <IconButton size="large" disabled>
+            <CustomLogoIcon
+              sx={{
+                height: 100,
+                width: 100,
+              }}
+            />
+            <Box sx={{ display: { md: 'inline', xs: 'none' } }}>
+              <Typography
+                variant="h6"
                 sx={{
-                  color:
-                    theme.palette.mode === 'dark'
-                      ? theme.palette.primary.main
-                      : theme.palette.success.dark,
-                  height: 40,
-                  width: 40,
+                  flexGrow: 1,
+                  color: theme.palette.text.primary,
+                  fontWeight: 'bold',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  marginLeft: '10px',
                 }}
-              />
-              <Box sx={{ display: { md: 'inline', xs: 'none' } }}>
-                <Typography
-                  variant='h6'
-                  sx={{
-                    flexGrow: 1,
-                    color: theme.palette.text.primary,
-                    fontWeight: 'bold',
-                    textTransform: 'uppercase',
-                    textDecoration: 'none',
-                    marginLeft: '10px',
-                  }}
-                >
-                  Bob's Company
-                </Typography>
-              </Box>
-            </IconButton>
+              >
+              </Typography>
+            </Box>
+          </IconButton>;
           </Link>
           <Box sx={{ flexGrow: 1 }} />
           <Box
