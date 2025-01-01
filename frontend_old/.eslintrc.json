@@ -4,7 +4,7 @@
     "es2021": true
   },
   "root": true,
-  "extends": ["react-app", "react-app/jest", "prettier"],
+  "extends": ["react-app", "react-app/jest", "plugin:jsx-a11y/recommended", "prettier"],
   "globals": {
     "__dirname": true
   },
@@ -14,7 +14,7 @@
     "project": "*/tsconfig.json"
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react",  "jsx-a11y", "@typescript-eslint"],
   "settings": {
     "react": {
       "version": "detect"

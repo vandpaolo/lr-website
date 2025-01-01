@@ -1,10 +1,50 @@
+# ========== Python / Django ==========
 *.pyc
-.DS_Store
-.next/
-.vscode
-db.sqlite3
-media/
-node_modules/ 
-venv/
+__pycache__/
+*.pyo
+*.pyd
+
+# Migrations (ignore everything except __init__.py so the folder is tracked)
 */migrations/*
 !*/migrations/__init__.py
+
+# Virtual environments
+venv/
+.venv/
+env/
+.venv-*
+
+# SQLite database
+db.sqlite3
+
+# Media (user-uploaded files)
+media/
+
+# ========== Environment / Config ==========
+.env
+*.env
+
+# ========== System Files ==========
+.DS_Store
+Thumbs.db
+
+# ========== IDE / Editor ==========
+.vscode/
+.idea/
+*.swp  # Vim swap files
+
+# ========== Node / React ==========
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# If you're using Create React App or another build tool:
+build/
+dist/
+.cache/
+
+# ========== Logs ==========
+*.log
+logs/
+*.log.*
+log/

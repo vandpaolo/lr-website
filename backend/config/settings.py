@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure--$g-e%io^a4vhd3-1t8=(2ij#%#kk5s!yjkg=s&5bt_zoroxls
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -29,6 +29,9 @@ INSTALLED_APPS = [
   # 3rd party
   'rest_framework',
   'corsheaders',
+
+  #production
+  "corsheaders",
 
   # Local
   'products',
@@ -132,7 +135,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-  'http://localhost:3000'
+  'http://localhost:3000',
+  "https://vandpaolo.github.io"
 ]
 
 
